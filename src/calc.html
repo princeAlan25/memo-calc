@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <main>
+        <div class="calc-side">
+            <div class="calc-container">
+                <div class="entry-screen">
+                    <input type="text" name="entry" id="entry-input" placeholder=".0" disabled>
+                    <input type="text" name="operation-type" id="operation-type" placeholder="What are you calculating for!">
+                </div>
+                <div class="buttons-part">
+
+                    <button id="one" onclick="loadClickedNumber(this.id)">1</button>
+                    <button id="two" onclick="loadClickedNumber(this.id)">2</button>
+                    <button id="three" onclick="loadClickedNumber(this.id)">3</button>
+                    <button id="plus" onclick="loadOperationType(this.id)">+</button>
+                    
+                    <button id="four" onclick="loadClickedNumber(this.id)">4</button>
+                    <button id="five" onclick="loadClickedNumber(this.id)">5</button>
+                    <button id="six" onclick="loadClickedNumber(this.id)">6</button>
+                    <button id="negative" onclick="loadOperationType(this.id)">-</button>
+
+                    <button id="seven" onclick="loadClickedNumber(this.id)">7</button>
+                    <button id="eight" onclick="loadClickedNumber(this.id)">8</button>
+                    <button id="nine" onclick="loadClickedNumber(this.id)">9</button>
+                    <button id="divide" onclick="loadOperationType(this.id)">/</button>
+
+                    <button id="pos-nega" onclick="changeNumberQuality()">+/-</button>
+                    <button id="zero" onclick="loadClickedNumber(this.id)">0</button>
+                    <button id="dot" onclick="assignDotOperator()">.</button>
+                    <button id="multiply" onclick="loadOperationType(this.id)">X</button>
+
+                    <button id="power" onclick="loadOperationType(this.id)">x<sup>n</sup></button>
+                    <button id="sqrt" onclick="loadOperationType(this.id)">sqrt</button>
+                    <button id="delete" onclick="deleteLastNumber()">Undo</button>
+                    <button id="clear" onclick="clearWholeCalculation()">Clear</button>
+
+                    <button id="equal" onclick="generateSolution()">=</button>
+
+                </div>
+                <div class="functions-part" onclick="saveCalculation()">Save this Calculation to the history and Clear</div>
+            </div>
+        </div>
+
+        <div class="history-side"></div>
+    </main>
+    <script src="calc.js"></script>
+</body>
+</html>

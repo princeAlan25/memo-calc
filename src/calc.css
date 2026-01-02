@@ -1,0 +1,202 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 1%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+main{
+    width: 100%;
+    height: 95%;
+    background: rgb(31, 0, 0);
+    color: pink;
+    text-shadow: 0px 0px 5px rgb(255, 253, 254);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+main *{
+    background: transparent;
+    color: inherit;
+    font-weight: inherit;
+    text-shadow: inherit;
+}
+
+main .calc-side{
+    width: 62vw;
+    height: 90vh;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.calc-side .calc-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: repeating-linear-gradient(transparent 0%,transparent 1%,pink 1%,pink 2%),repeating-linear-gradient(pink 0%,pink 1%,transparent 1%,transparent 2%);
+    box-shadow: 0px 0px 4px 1px white;
+}
+.calc-container .entry-screen{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(202, 116, 116);
+}
+.entry-screen input{
+    width: 40%;
+    height: 70%;
+    font-size: 150%;
+    text-align: right;
+    padding: 0.5%;
+    box-shadow: 0px 0px 5px 1px rgb(139, 44, 44);
+    border: none;
+}
+
+
+.entry-screen #operation-type{
+    font-size: 100%;
+    text-align: left;
+}
+
+.calc-container .buttons-part{
+    width: 90%;
+    height: 60%;
+    padding: 1%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 3%;
+    column-gap: 1.5%;
+}
+.buttons-part :last-child{
+    grid-column: 1/5;
+    font-size: 250%;
+    background: rgba(255, 17, 76, 0.493);
+    color: pink;
+    padding: 0;
+}
+sup{
+    background: none !important;
+    color: inherit !important;
+    font-size: 70% !important;
+}
+
+.buttons-part button{
+    background: linear-gradient(transparent,rgba(255, 63, 95, 0.425),transparent);
+    box-shadow: 0px 0px 2px 1px rgb(255, 255, 255);
+    font-size: 120%;
+    border-radius: 10px;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: brown;
+    transition-duration: 200ms;
+}
+.buttons-part button:active{
+    font-size: 110%;
+    background: linear-gradient(rgba(255, 63, 95, 0.425),rgba(255, 63, 95, 0.144),rgba(255, 63, 95, 0.425));
+}
+
+.calc-container .functions-part{
+    width: 90%;
+    height: 10%;
+    padding: 1%;
+    font-size: 150%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to top,white,transparent);
+    color: brown;
+    box-shadow: 0px 10px 5px brown;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+.functions-part:active{
+    background: linear-gradient(white,transparent);
+    box-shadow: 0px 5px 5px brown;
+    color: rgba(165, 42, 42, 0.74);
+}
+
+main .history-side{
+    width: 30vw;
+    height: 90vh;
+    overflow-y: scroll;
+}
+.history-side .history-flowchart{
+    width: 95%;
+    height: 30%;
+    box-shadow: 0px 0px 2px 0px pink;
+    margin-inline: auto;
+    background: linear-gradient(transparent,rgba(255, 192, 203, 0.253));
+    margin-top: 3%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.history-flowchart .flowchart{
+    width: fit-content;
+    height: 40%;
+    text-align: center;
+    padding-inline: 1%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+.flowchart p{
+    margin: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 2%;
+}
+.flowchart p font{
+    margin-inline: 1%;
+}
+.flowchart .number-processor{
+    border-bottom: 3px ridge rgba(255, 192, 203, 0.37);
+    border-inline: 2px ridge rgba(255, 192, 203, 0.37);
+    padding-bottom: 15%;
+}
+
+.history-flowchart .history-title{
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+}
+.history-title h4{
+    width: 80%;
+    max-width: 80%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(172, 0, 43);
+    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+.history-title img{
+    cursor: pointer;
+}
+.history-title img:active{
+    width: 30px;
+}
